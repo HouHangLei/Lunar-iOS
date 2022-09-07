@@ -445,7 +445,7 @@ extension Lunar {
     /// 获取气令名（字符串），当匹配到键为DONG_ZHI的气令时，也返回中文的冬至，未匹配时返回空字符串
     /// - Returns: 冬至
     @objc public func getQi() -> String? {
-        let getQi = lunar?.invokeMethod("lunar", withArguments: nil)
+        let getQi = lunar?.invokeMethod("getQi", withArguments: nil)
         return getQi?.toString()
     }
 

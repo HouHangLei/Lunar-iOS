@@ -119,7 +119,7 @@ import JavaScriptCore
     }()
 
     private init() {
-        guard let path = Bundle.main.path(forResource: "lunar", ofType: "js") else {
+        guard let path = Bundle(for: LunarManager.self).path(forResource: "lunar", ofType: "js") else {
             return
         }
         guard let lunarJS = try? String(contentsOfFile: path, encoding: .utf8) else {

@@ -13,7 +13,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let lunar = Lunar(date: Date())
+        let qi = lunar.getJieQi()
+        print("qi = \(qi)")
     }
 
     override func didReceiveMemoryWarning() {

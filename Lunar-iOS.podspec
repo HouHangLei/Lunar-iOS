@@ -28,15 +28,17 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/HouHangLei/Lunar-iOS.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '8.0'
 
   s.source_files = 'Lunar-iOS/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'Lunar-iOS' => ['Lunar-iOS/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'Lunar-iOS' => ['Lunar-iOS/Assets/*.{png,js}']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.swift_versions = '5.0'
+  
 end
