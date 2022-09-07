@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'Lunar-iOS_Example' do
+  pod 'Lunar-iOS', :path => '../'
+
+  target 'Lunar-iOS_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
