@@ -1,0 +1,16 @@
+PODS:
+  - Lunar-iOS (0.1.0)
+
+DEPENDENCIES:
+  - Lunar-iOS (from `../`)
+
+EXTERNAL SOURCES:
+  Lunar-iOS:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Lunar-iOS: a87564f8a79e744583b108bbf7cef934c820af34
+
+PODFILE CHECKSUM: 4268ec6fb7988f48d0e2e47d3b71b10bd357d4dc
+
+COCOAPODS: 1.11.2

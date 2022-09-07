@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lunar_iOS
 
 class ViewController: UIViewController {
 

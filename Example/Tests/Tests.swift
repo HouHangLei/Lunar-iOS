@@ -1,5 +1,5 @@
 import XCTest
-import Lunar-iOS
+import Lunar_iOS
 
 class Tests: XCTestCase {
     
