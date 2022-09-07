@@ -17,7 +17,7 @@ let package = Package(
             name: "Lunar-iOS",
             dependencies: [],
             path: "Lunar-iOS",
-            resources: [.process("Lunar-iOS.bundle")]
+            resources: [.process("Lunar-iOS/Assets/lunar.js")]
         ),
     ]
 )
