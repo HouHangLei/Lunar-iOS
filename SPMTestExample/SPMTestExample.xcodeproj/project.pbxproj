@@ -13,6 +13,7 @@
 		CB25115928C9A3A9001E4A0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB25115728C9A3A9001E4A0F /* Main.storyboard */; };
 		CB25115B28C9A3AB001E4A0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB25115A28C9A3AB001E4A0F /* Assets.xcassets */; };
 		CB25115E28C9A3AB001E4A0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB25115C28C9A3AB001E4A0F /* LaunchScreen.storyboard */; };
+		CB25116928C9A441001E4A0F /* Lunar-iOS in Frameworks */ = {isa = PBXBuildFile; productRef = CB25116828C9A441001E4A0F /* Lunar-iOS */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB25116928C9A441001E4A0F /* Lunar-iOS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = SPMTestExample;
+			packageProductDependencies = (
+				CB25116828C9A441001E4A0F /* Lunar-iOS */,
+			);
 			productName = SPMTestExample;
 			productReference = CB25114E28C9A3A9001E4A0F /* SPMTestExample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = CB25114528C9A3A9001E4A0F;
+			packageReferences = (
+				CB25116728C9A441001E4A0F /* XCRemoteSwiftPackageReference "Lunar-iOS" */,
+			);
 			productRefGroup = CB25114F28C9A3A9001E4A0F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -356,6 +364,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB25116728C9A441001E4A0F /* XCRemoteSwiftPackageReference "Lunar-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HouHangLei/Lunar-iOS.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB25116828C9A441001E4A0F /* Lunar-iOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB25116728C9A441001E4A0F /* XCRemoteSwiftPackageReference "Lunar-iOS" */;
+			productName = "Lunar-iOS";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB25114628C9A3A9001E4A0F /* Project object */;
 }

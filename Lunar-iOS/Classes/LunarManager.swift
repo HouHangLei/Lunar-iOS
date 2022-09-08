@@ -120,7 +120,7 @@ import JavaScriptCore
 
     private init() {
 #if SWIFT_PACKAGE
-        let lunarBundle = SWIFTPM_MODULE_BUNDLE
+        let lunarBundle = Bundle.module
 #else
         let lunarBundle = Bundle(for: LunarManager.self)
 #endif
