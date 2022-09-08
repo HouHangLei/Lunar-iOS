@@ -8,7 +8,7 @@ extension Foundation.Bundle {
     /// Returns the resource bundle associated with the current Swift module.
 
     static var moduleBundle: Bundle? = {
-        let bundleName = "Lunar_iOS_Lunar_iOS"
+        let bundleName = "Lunar-iOS_Lunar-iOS"
 
         let candidates = [
             // Bundle should be present here when the package is linked into an App.
