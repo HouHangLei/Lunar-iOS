@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         let lunar = Lunar(date: Date())
-        let qi = lunar.getJieQi()
+        let qi = lunar.toFullString()
         print("qi = \(qi)")
     }
 

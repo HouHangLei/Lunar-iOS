@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Lunar-iOS'
-  s.version          = '1.2.33.3'
+  s.version          = '1.2.33.4'
   s.summary          = '基于Lunar封装的iOS版本，支持Objective-C和Swift。'
 
 # This description is used to generate tags and improve search results.
@@ -31,14 +31,9 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Lunar-iOS/Classes/**/*'
-  
-   s.resource_bundles = {
-     'Lunar-iOS' => ['Lunar-iOS/Assets/*.{png,js,bundle}']
-   }
+   
+  s.resource = 'Lunar-iOS/Assets/Resources.bundle'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
   s.swift_versions = '5.0'
   
 end
