@@ -33,7 +33,7 @@ TODO: Add long description of the pod here.
   s.source_files = 'Lunar-iOS/Classes/**/*'
   
    s.resource_bundles = {
-     'Lunar-iOS' => ['Lunar-iOS/Assets/*.{png,js}']
+     'Lunar-iOS' => ['Lunar-iOS/Assets/*.{png,js,bundle}']
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
