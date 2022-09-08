@@ -119,11 +119,7 @@ import JavaScriptCore
     }()
 
     private init() {
-#if SWIFT_PACKAGE
-        let lunarBundle = Bundle.module
-#else
-        let lunarBundle = Bundle(for: LunarManager.self)
-#endif
+        let lunarBundle = Bundle.moduleBundle ?? Bundle.main
         guard let bundlePath = lunarBundle.path(forResource: "Lunar-iOS", ofType: "bundle") else {
             return
         }
