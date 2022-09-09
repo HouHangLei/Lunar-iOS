@@ -54,7 +54,7 @@ pod 'Lunar-iOS'
 To integrate using Apple's Swift package manager, add the following as a dependency to your `Package.swift`:
 
 ```ruby
-.package(url: "https://github.com/HouHangLei/Lunar-iOS.git", .upToNextMajor(from: "1.2.33.3"))
+.package(url: "https://github.com/HouHangLei/Lunar-iOS.git", .upToNextMajor(from: "1.2.33.5"))
 ```
 
 ## License
