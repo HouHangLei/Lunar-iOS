@@ -22,7 +22,7 @@ public class LunarUtil: NSObject {
      HHmm：HH:mm时刻。
      返回时辰(地支)，例：子。
      */
-    class func convertTime(HHmm: String) -> String? {
+    @objc public class func convertTime(HHmm: String) -> String? {
         let convertTime = LunarManager.stand.lunarUtilJsValue?.invokeMethod("convertTime", withArguments: [HHmm])
         return convertTime?.toString()
     }

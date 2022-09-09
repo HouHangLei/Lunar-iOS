@@ -36,4 +36,10 @@ extension Fu {
         return getIndex?.toInt32() ?? 1
     }
 
+    /// 获取详细内容
+    /// - Returns: 
+    @objc public func toFullString() -> String? {
+        let getName = fu?.invokeMethod("toFullString", withArguments: nil)
+        return getName?.toString()
+    }
 }

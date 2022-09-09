@@ -466,15 +466,36 @@ extension Lunar {
     
     /// 获取某个节气交接的准确时间（name可通过getJieQiList方法遍历所有节气名称）
     /// - Parameters:
-    ///   - date: 日期
     ///   - name: 节气名称
-    /// - Returns: 日期（阳历）例：2020-02-04 17:03:12
-    @objc public func getJieQiHandoverTime(name: String) -> String? {
+    /// - Returns: 阳历对象
+    @objc public func getJieQiTable(name: String) -> Solar? {
         let getJieQiTable = lunar?.invokeMethod("getJieQiTable", withArguments: nil)
         let getJieQiTableSubscript = getJieQiTable?.objectForKeyedSubscript(name)
-        let toYmdHms = getJieQiTableSubscript?.invokeMethod("toYmdHms", withArguments: [])
-        return toYmdHms?.toString()
+        guard let getJieQiTableSubscript = getJieQiTableSubscript else {
+            return nil
+        }
+        return Solar(jsValue: getJieQiTableSubscript)
     }
+    
+    /// 获取所有节气交接的准确时间
+    /// - Parameters:
+    /// - Returns: 日期（阳历）例：2020-02-04 17:03:12
+    @objc public func getJieQiTable() -> [String: Solar]? {
+        let getJieQiTable = lunar?.invokeMethod("getJieQiTable", withArguments: nil)
+        guard let getJieQiTableDic = getJieQiTable?.toDictionary() as? [String: Any] else {
+            return nil
+        }
+        var solars: [String: Solar] = [:]
+        for jieQiName in getJieQiTableDic.keys {
+            let getJieQiTableSubscript = getJieQiTable?.objectForKeyedSubscript(jieQiName)
+            guard let getJieQiTableSubscript = getJieQiTableSubscript else {
+                return nil
+            }
+            solars[jieQiName] = Solar(jsValue: getJieQiTableSubscript)
+        }
+        return solars
+    }
+
     
     /// 获取上一节气（逆推的第一个节气）。
     /// - Parameters:
@@ -545,7 +566,7 @@ extension Lunar {
     }
 
     private func getPrevJieQi(invokeMethod: String, wholeDay: Bool?) -> JieQi? {
-        let getPrevJieQi = lunar?.invokeMethod(invokeMethod, withArguments: wholeDay != nil ? [NSNumber(booleanLiteral: wholeDay!)] : nil)
+        let getPrevJieQi = lunar?.invokeMethod(invokeMethod, withArguments: wholeDay != nil ? [wholeDay!] : nil)
         guard let getPrevJieQi = getPrevJieQi, getPrevJieQi.isNull == false else {
             return nil
         }

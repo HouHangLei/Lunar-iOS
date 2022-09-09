@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Lunar-iOS'
-  s.version          = '1.2.33.4'
+  s.version          = '1.2.33.5'
   s.summary          = '基于Lunar封装的iOS版本，支持Objective-C和Swift。'
 
 # This description is used to generate tags and improve search results.
