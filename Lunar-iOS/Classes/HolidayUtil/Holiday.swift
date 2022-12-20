@@ -19,7 +19,7 @@ import UIKit
     /// 关联的节日YYYY-MM-DD格式的日期。例如2020-05-02日放劳动节，它关联的节日为2020-05-01，当放假与节日为同一天时，关联节日也是当天。
     public var target: String?
     
-    init(day: String?, work: Bool, name: String?, target: String?) {
+    public init(day: String?, work: Bool, name: String?, target: String?) {
         self.day = day
         self.work = work
         self.name = name
