@@ -37,6 +37,16 @@ Lunar *d = [[Lunar alloc] initWithYear:1986 month:4 day:21];
 [d toFullString];
 ```
 
+#### 法定假日`HolidayUtil`
+```
+// Lunar
+var holidays = HolidayUtil.getHolidays(2020);
+console.log(holidays);
+// Swift
+var holidays = HolidayUtil.getHolidays(year: 2023)
+print("\(holidays)")
+```
+
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Installation
@@ -54,7 +64,7 @@ pod 'Lunar-iOS'
 To integrate using Apple's Swift package manager, add the following as a dependency to your `Package.swift`:
 
 ```ruby
-.package(url: "https://github.com/HouHangLei/Lunar-iOS.git", .upToNextMajor(from: "1.2.33.5"))
+.package(url: "https://github.com/HouHangLei/Lunar-iOS.git", .upToNextMajor(from: "1.2.37.1"))
 ```
 
 ## License
