@@ -25,7 +25,7 @@ public class HolidayUtil: NSObject {
     }
     
     /// 指定日期是否放假或调休(如果当天不是节假日或调休，返回空)
-    /// - Parameter ymd: 格式为YYYY-MM日期字符串
+    /// - Parameter ymd: 格式为YYYY-MM-dd日期字符串
     /// - Returns: 假日对象
     @objc public class func getHoliday(ymd: String) -> Holiday? {
         let holiday = LunarManager.stand.holidayUtilJsValue?.invokeMethod("getHoliday", withArguments: [ymd])

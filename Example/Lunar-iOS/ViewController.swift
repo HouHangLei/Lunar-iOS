@@ -40,6 +40,9 @@ class ViewController: UIViewController {
         // 使用对象直接调用invokeMethod
         let string = lunar.lunar?.invokeMethod("toFullString", withArguments: nil).toString()
         print("string = \(string)")
+        
+        let holidays = HolidayUtil.getHolidays(year: 2023)
+        print("holidays -> \(holidays)")
     }
 
     override func didReceiveMemoryWarning() {
